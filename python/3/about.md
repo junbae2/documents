@@ -4,8 +4,23 @@ Python3.x
 기초
 ----
 
-좀더보기
---------
+### if
+
+> 조건부표현식 > if 조건절을 간단히 표현할수 있다.
+
+```
+a = 100
+m = ''
+
+if a > 200: m = 'OK!'
+else: m = 'More!'
+
+간단히 표현하면
+m = 'OK!' if a > 200 else 'More!'
+```
+
+심화
+----
 
 > Generator expression(생성자표현식)
 
@@ -27,3 +42,5 @@ n2 = [n * 2 for n in numbers]
 > n2
  [2, 4, 6] # List 타입이 된다.
 ```
+
+https://github.com/junbae2/documents.git

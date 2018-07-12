@@ -6,8 +6,6 @@ setting.py
 
 > USE_TZ = True or False
 
-\-
-
 ```
 setting.py
 ..

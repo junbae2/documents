@@ -18,7 +18,7 @@ $(가상환경) python manage.py shell
 .
 >>> import {appname}.models from {Model}
 >>> import datetime
->>>
+>>>A
 >>> {Model}.objects.filter(created_ymdt__date=datetime.date(2018, 6, 27)).count()
 0 !! 왜!!
 >>>

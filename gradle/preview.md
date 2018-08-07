@@ -8,6 +8,9 @@ Gradle 을 알아보자
 
 ```
 $ gradle init
+
+!type 욥선이 붙을수 있는데, 참고 하자
+https://docs.gradle.org/current/userguide/build_init_plugin.html#sec:build_init_types
 ```
 
 현재 디렉토리에 gradle 관련 기본파일들을 생성해 준다.

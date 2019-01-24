@@ -1,5 +1,5 @@
 1. get value from hash
-  zscore 4cast:question:shared:count:2019-01-16 "\xac\xed\x00\x05t\x00\b10000072"
+  zscore spring:question:shared:count:2019-01-16 "1110072"
 
 1. del keys
   redis-cli KEYS "spring:session:*" | xargs redis-cli DEL

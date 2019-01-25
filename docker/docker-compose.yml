@@ -1,0 +1,63 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-container
+    volumes:
+      - "db-data:/var/lib/mysql"
+      - "./init/:/docker-entrypoint-initdb.d"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: "forecast"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "djemals123"
+      MYSQL_ROOT_PASSWORD: "root"
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    ports:
+      - 8080:8080
+
+  elasticsearch:
+    image: elasticsearch:6.5.3
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - docker_elk
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: mqadmin
+      RABBITMQ_DEFAULT_PASS: mqadmin
+    volumes:
+      - "rabbitmq_data:/data"
+
+  # redis:
+  #   image: redis:latest
+  #   command: ["redis-server", "--appendonly", "yes"]
+  #   hostname: redis
+  #   ports:
+  #     - 6379:6379
+  #   networks:
+  #     - redis-net
+  #   volumes:
+  #     - redis-data:/data
+
+networks:
+  redis-net:
+  docker_elk:
+    driver: bridge
+
+volumes:
+  # redis-data:
+  db-data:
+  rabbitmq_data:

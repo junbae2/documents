@@ -1,5 +1,6 @@
 1. get value from hash
   zscore spring:question:shared:count:2019-01-16 "1110072"
+  zrange spring:question:shared:count:2019-01-24 0 1 withscores
 
 1. del keys
   redis-cli KEYS "spring:session:*" | xargs redis-cli DEL

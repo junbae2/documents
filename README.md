@@ -1,3 +1,5 @@
-## [Mysql 복합인덱스와 실행계획](https://github.com/junbae2/documents/blob/master/documents/1/%5BMysql%5D%EB%B3%B5%ED%95%A9%EC%9D%B8%EB%8D%B1%EC%8A%A4%EC%99%80%EC%8B%A4%ED%96%89%EA%B3%84%ED%9A%8D.md)
-### #Mysql
+## 1) 필요한 내용을 정리해 둡니다.
+## 2) 유익한정모를 모아 봅니다.
 ---
+## [Index >](https://github.com/junbae2/documents/blob/master/index.md) 
+
